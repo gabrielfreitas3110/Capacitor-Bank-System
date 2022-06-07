@@ -1,0 +1,18 @@
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\Capacitor Bank System.exe
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\Capacitor Bank System.deps.json
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\Capacitor Bank System.runtimeconfig.json
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\Capacitor Bank System.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\Capacitor Bank System.pdb
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.csproj.AssemblyReference.cache
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.Form1.resources
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.Properties.Resources.resources
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.csproj.GenerateResource.cache
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.AssemblyInfoInputs.cache
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.AssemblyInfo.cs
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\refint\Capacitor Bank System.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.pdb
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.genruntimeconfig.cache
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\ref\Capacitor Bank System.dll
