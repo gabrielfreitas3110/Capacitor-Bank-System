@@ -30,55 +30,160 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.motor_off = new System.Windows.Forms.Button();
+            this.motor_on_4 = new System.Windows.Forms.PictureBox();
+            this.motor_off_4 = new System.Windows.Forms.PictureBox();
+            this.motor_on_3 = new System.Windows.Forms.PictureBox();
+            this.motor_off_3 = new System.Windows.Forms.PictureBox();
+            this.motor_on_2 = new System.Windows.Forms.PictureBox();
+            this.motor_off_2 = new System.Windows.Forms.PictureBox();
+            this.motor_on_1 = new System.Windows.Forms.PictureBox();
+            this.motor_off_1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.motorOff = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.motorOn1 = new System.Windows.Forms.PictureBox();
-            this.motorOn3 = new System.Windows.Forms.PictureBox();
-            this.motorOn5 = new System.Windows.Forms.PictureBox();
-            this.motorOn7 = new System.Windows.Forms.PictureBox();
-            this.motorOn2 = new System.Windows.Forms.PictureBox();
-            this.motorOn4 = new System.Windows.Forms.PictureBox();
-            this.motorOn6 = new System.Windows.Forms.PictureBox();
-            this.motorOn8 = new System.Windows.Forms.PictureBox();
+            this.btn_play = new System.Windows.Forms.Button();
+            this.btn_stop = new System.Windows.Forms.Button();
+            this.lbTimer = new System.Windows.Forms.Label();
+            this.lbMotor1 = new System.Windows.Forms.Label();
+            this.lbMotor2 = new System.Windows.Forms.Label();
+            this.lbMotor4 = new System.Windows.Forms.Label();
+            this.lbMotor3 = new System.Windows.Forms.Label();
+            this.statusMotor1 = new System.Windows.Forms.Label();
+            this.statusMotor2 = new System.Windows.Forms.Label();
+            this.statusMotor4 = new System.Windows.Forms.Label();
+            this.statusMotor3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.motor_off);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.motor_on_4);
+            this.panel1.Controls.Add(this.motor_off_4);
+            this.panel1.Controls.Add(this.motor_on_3);
+            this.panel1.Controls.Add(this.motor_off_3);
+            this.panel1.Controls.Add(this.motor_on_2);
+            this.panel1.Controls.Add(this.motor_off_2);
+            this.panel1.Controls.Add(this.motor_on_1);
+            this.panel1.Controls.Add(this.motor_off_1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 400);
             this.panel1.TabIndex = 0;
             // 
-            // motor_off
+            // motor_on_4
             // 
-            this.motor_off.BackColor = System.Drawing.SystemColors.Control;
-            this.motor_off.ImageIndex = 0;
-            this.motor_off.Location = new System.Drawing.Point(107, 222);
-            this.motor_off.Name = "motor_off";
-            this.motor_off.Size = new System.Drawing.Size(120, 90);
-            this.motor_off.TabIndex = 1;
-            this.motor_off.UseVisualStyleBackColor = false;
+            this.motor_on_4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_on_4.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
+            this.motor_on_4.Location = new System.Drawing.Point(312, 341);
+            this.motor_on_4.Name = "motor_on_4";
+            this.motor_on_4.Size = new System.Drawing.Size(43, 59);
+            this.motor_on_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_on_4.TabIndex = 9;
+            this.motor_on_4.TabStop = false;
+            this.motor_on_4.Visible = false;
+            this.motor_on_4.Click += new System.EventHandler(this.motor_on_4_Click);
+            // 
+            // motor_off_4
+            // 
+            this.motor_off_4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_off_4.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
+            this.motor_off_4.Location = new System.Drawing.Point(312, 341);
+            this.motor_off_4.Name = "motor_off_4";
+            this.motor_off_4.Size = new System.Drawing.Size(43, 59);
+            this.motor_off_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_off_4.TabIndex = 8;
+            this.motor_off_4.TabStop = false;
+            this.motor_off_4.Click += new System.EventHandler(this.motor_off_4_Click);
+            // 
+            // motor_on_3
+            // 
+            this.motor_on_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_on_3.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
+            this.motor_on_3.Location = new System.Drawing.Point(224, 341);
+            this.motor_on_3.Name = "motor_on_3";
+            this.motor_on_3.Size = new System.Drawing.Size(43, 59);
+            this.motor_on_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_on_3.TabIndex = 7;
+            this.motor_on_3.TabStop = false;
+            this.motor_on_3.Visible = false;
+            this.motor_on_3.Click += new System.EventHandler(this.motor_on_3_Click);
+            // 
+            // motor_off_3
+            // 
+            this.motor_off_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_off_3.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
+            this.motor_off_3.Location = new System.Drawing.Point(224, 341);
+            this.motor_off_3.Name = "motor_off_3";
+            this.motor_off_3.Size = new System.Drawing.Size(43, 59);
+            this.motor_off_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_off_3.TabIndex = 6;
+            this.motor_off_3.TabStop = false;
+            this.motor_off_3.Click += new System.EventHandler(this.motor_off_3_Click);
+            // 
+            // motor_on_2
+            // 
+            this.motor_on_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_on_2.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
+            this.motor_on_2.Location = new System.Drawing.Point(133, 341);
+            this.motor_on_2.Name = "motor_on_2";
+            this.motor_on_2.Size = new System.Drawing.Size(43, 59);
+            this.motor_on_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_on_2.TabIndex = 5;
+            this.motor_on_2.TabStop = false;
+            this.motor_on_2.Visible = false;
+            this.motor_on_2.Click += new System.EventHandler(this.motor_on_2_Click);
+            // 
+            // motor_off_2
+            // 
+            this.motor_off_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_off_2.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
+            this.motor_off_2.Location = new System.Drawing.Point(133, 341);
+            this.motor_off_2.Name = "motor_off_2";
+            this.motor_off_2.Size = new System.Drawing.Size(43, 59);
+            this.motor_off_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_off_2.TabIndex = 4;
+            this.motor_off_2.TabStop = false;
+            this.motor_off_2.Click += new System.EventHandler(this.motor_off_2_Click);
+            // 
+            // motor_on_1
+            // 
+            this.motor_on_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_on_1.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
+            this.motor_on_1.Location = new System.Drawing.Point(45, 341);
+            this.motor_on_1.Name = "motor_on_1";
+            this.motor_on_1.Size = new System.Drawing.Size(43, 59);
+            this.motor_on_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_on_1.TabIndex = 3;
+            this.motor_on_1.TabStop = false;
+            this.motor_on_1.Visible = false;
+            this.motor_on_1.Click += new System.EventHandler(this.motor_on_1_Click);
+            // 
+            // motor_off_1
+            // 
+            this.motor_off_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.motor_off_1.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
+            this.motor_off_1.Location = new System.Drawing.Point(45, 341);
+            this.motor_off_1.Name = "motor_off_1";
+            this.motor_off_1.Size = new System.Drawing.Size(43, 59);
+            this.motor_off_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.motor_off_1.TabIndex = 2;
+            this.motor_off_1.TabStop = false;
+            this.motor_off_1.Click += new System.EventHandler(this.motor_off_1_Click);
             // 
             // panel4
             // 
@@ -117,153 +222,155 @@
             this.panel6.Size = new System.Drawing.Size(200, 100);
             this.panel6.TabIndex = 1;
             // 
-            // motorOff
-            // 
-            this.motorOff.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motorOff.Location = new System.Drawing.Point(497, 67);
-            this.motorOff.Name = "motorOff";
-            this.motorOff.Size = new System.Drawing.Size(90, 120);
-            this.motorOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOff.TabIndex = 2;
-            this.motorOff.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackgroundImage = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(616, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 120);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // timer1
             // 
-            this.timer1.Interval = 30;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // motorOn1
+            // btn_play
             // 
-            this.motorOn1.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_1;
-            this.motorOn1.Location = new System.Drawing.Point(497, 67);
-            this.motorOn1.Name = "motorOn1";
-            this.motorOn1.Size = new System.Drawing.Size(90, 120);
-            this.motorOn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn1.TabIndex = 8;
-            this.motorOn1.TabStop = false;
-            this.motorOn1.Visible = false;
+            this.btn_play.Location = new System.Drawing.Point(674, 389);
+            this.btn_play.Name = "btn_play";
+            this.btn_play.Size = new System.Drawing.Size(75, 23);
+            this.btn_play.TabIndex = 2;
+            this.btn_play.Text = "Play";
+            this.btn_play.UseVisualStyleBackColor = true;
+            this.btn_play.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // motorOn3
+            // btn_stop
             // 
-            this.motorOn3.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_3;
-            this.motorOn3.Location = new System.Drawing.Point(497, 67);
-            this.motorOn3.Name = "motorOn3";
-            this.motorOn3.Size = new System.Drawing.Size(90, 120);
-            this.motorOn3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn3.TabIndex = 9;
-            this.motorOn3.TabStop = false;
-            this.motorOn3.Visible = false;
+            this.btn_stop.Enabled = false;
+            this.btn_stop.Location = new System.Drawing.Point(755, 389);
+            this.btn_stop.Name = "btn_stop";
+            this.btn_stop.Size = new System.Drawing.Size(75, 23);
+            this.btn_stop.TabIndex = 3;
+            this.btn_stop.Text = "Stop";
+            this.btn_stop.UseVisualStyleBackColor = true;
+            this.btn_stop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // motorOn5
+            // lbTimer
             // 
-            this.motorOn5.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_5;
-            this.motorOn5.Location = new System.Drawing.Point(497, 67);
-            this.motorOn5.Name = "motorOn5";
-            this.motorOn5.Size = new System.Drawing.Size(90, 120);
-            this.motorOn5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn5.TabIndex = 10;
-            this.motorOn5.TabStop = false;
-            this.motorOn5.Visible = false;
+            this.lbTimer.AutoSize = true;
+            this.lbTimer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbTimer.Location = new System.Drawing.Point(418, 15);
+            this.lbTimer.Name = "lbTimer";
+            this.lbTimer.Size = new System.Drawing.Size(19, 21);
+            this.lbTimer.TabIndex = 4;
+            this.lbTimer.Text = "0";
             // 
-            // motorOn7
+            // lbMotor1
             // 
-            this.motorOn7.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_7;
-            this.motorOn7.Location = new System.Drawing.Point(497, 67);
-            this.motorOn7.Name = "motorOn7";
-            this.motorOn7.Size = new System.Drawing.Size(90, 120);
-            this.motorOn7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn7.TabIndex = 11;
-            this.motorOn7.TabStop = false;
-            this.motorOn7.Visible = false;
+            this.lbMotor1.AutoSize = true;
+            this.lbMotor1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMotor1.Location = new System.Drawing.Point(418, 46);
+            this.lbMotor1.Name = "lbMotor1";
+            this.lbMotor1.Size = new System.Drawing.Size(74, 21);
+            this.lbMotor1.TabIndex = 5;
+            this.lbMotor1.Text = "Motor 1:";
             // 
-            // motorOn2
+            // lbMotor2
             // 
-            this.motorOn2.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_2;
-            this.motorOn2.Location = new System.Drawing.Point(497, 67);
-            this.motorOn2.Name = "motorOn2";
-            this.motorOn2.Size = new System.Drawing.Size(90, 120);
-            this.motorOn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn2.TabIndex = 13;
-            this.motorOn2.TabStop = false;
-            this.motorOn2.Visible = false;
+            this.lbMotor2.AutoSize = true;
+            this.lbMotor2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMotor2.Location = new System.Drawing.Point(418, 67);
+            this.lbMotor2.Name = "lbMotor2";
+            this.lbMotor2.Size = new System.Drawing.Size(74, 21);
+            this.lbMotor2.TabIndex = 6;
+            this.lbMotor2.Text = "Motor 2:";
             // 
-            // motorOn4
+            // lbMotor4
             // 
-            this.motorOn4.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_4;
-            this.motorOn4.Location = new System.Drawing.Point(497, 67);
-            this.motorOn4.Name = "motorOn4";
-            this.motorOn4.Size = new System.Drawing.Size(90, 120);
-            this.motorOn4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn4.TabIndex = 14;
-            this.motorOn4.TabStop = false;
-            this.motorOn4.Visible = false;
+            this.lbMotor4.AutoSize = true;
+            this.lbMotor4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMotor4.Location = new System.Drawing.Point(418, 109);
+            this.lbMotor4.Name = "lbMotor4";
+            this.lbMotor4.Size = new System.Drawing.Size(74, 21);
+            this.lbMotor4.TabIndex = 8;
+            this.lbMotor4.Text = "Motor 4:";
             // 
-            // motorOn6
+            // lbMotor3
             // 
-            this.motorOn6.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_6;
-            this.motorOn6.Location = new System.Drawing.Point(497, 67);
-            this.motorOn6.Name = "motorOn6";
-            this.motorOn6.Size = new System.Drawing.Size(90, 120);
-            this.motorOn6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn6.TabIndex = 15;
-            this.motorOn6.TabStop = false;
-            this.motorOn6.Visible = false;
+            this.lbMotor3.AutoSize = true;
+            this.lbMotor3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMotor3.Location = new System.Drawing.Point(418, 88);
+            this.lbMotor3.Name = "lbMotor3";
+            this.lbMotor3.Size = new System.Drawing.Size(74, 21);
+            this.lbMotor3.TabIndex = 7;
+            this.lbMotor3.Text = "Motor 3:";
             // 
-            // motorOn8
+            // statusMotor1
             // 
-            this.motorOn8.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on_8;
-            this.motorOn8.Location = new System.Drawing.Point(497, 67);
-            this.motorOn8.Name = "motorOn8";
-            this.motorOn8.Size = new System.Drawing.Size(90, 120);
-            this.motorOn8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.motorOn8.TabIndex = 16;
-            this.motorOn8.TabStop = false;
-            this.motorOn8.Visible = false;
+            this.statusMotor1.AutoSize = true;
+            this.statusMotor1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.statusMotor1.Location = new System.Drawing.Point(498, 46);
+            this.statusMotor1.Name = "statusMotor1";
+            this.statusMotor1.Size = new System.Drawing.Size(48, 21);
+            this.statusMotor1.TabIndex = 9;
+            this.statusMotor1.Text = "False";
+            // 
+            // statusMotor2
+            // 
+            this.statusMotor2.AutoSize = true;
+            this.statusMotor2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.statusMotor2.Location = new System.Drawing.Point(498, 67);
+            this.statusMotor2.Name = "statusMotor2";
+            this.statusMotor2.Size = new System.Drawing.Size(48, 21);
+            this.statusMotor2.TabIndex = 10;
+            this.statusMotor2.Text = "False";
+            // 
+            // statusMotor4
+            // 
+            this.statusMotor4.AutoSize = true;
+            this.statusMotor4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.statusMotor4.Location = new System.Drawing.Point(498, 109);
+            this.statusMotor4.Name = "statusMotor4";
+            this.statusMotor4.Size = new System.Drawing.Size(48, 21);
+            this.statusMotor4.TabIndex = 12;
+            this.statusMotor4.Text = "False";
+            // 
+            // statusMotor3
+            // 
+            this.statusMotor3.AutoSize = true;
+            this.statusMotor3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.statusMotor3.Location = new System.Drawing.Point(498, 88);
+            this.statusMotor3.Name = "statusMotor3";
+            this.statusMotor3.Size = new System.Drawing.Size(48, 21);
+            this.statusMotor3.TabIndex = 11;
+            this.statusMotor3.Text = "False";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 861);
-            this.Controls.Add(this.motorOn8);
-            this.Controls.Add(this.motorOn6);
-            this.Controls.Add(this.motorOn4);
-            this.Controls.Add(this.motorOn2);
-            this.Controls.Add(this.motorOn7);
-            this.Controls.Add(this.motorOn5);
-            this.Controls.Add(this.motorOn3);
-            this.Controls.Add(this.motorOn1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.motorOff);
+            this.Controls.Add(this.statusMotor4);
+            this.Controls.Add(this.statusMotor3);
+            this.Controls.Add(this.statusMotor2);
+            this.Controls.Add(this.statusMotor1);
+            this.Controls.Add(this.lbMotor4);
+            this.Controls.Add(this.lbMotor3);
+            this.Controls.Add(this.lbMotor2);
+            this.Controls.Add(this.lbMotor1);
+            this.Controls.Add(this.lbTimer);
+            this.Controls.Add(this.btn_stop);
+            this.Controls.Add(this.btn_play);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_on_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motor_off_1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.motorOff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.motorOn8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,22 +379,30 @@
         #endregion
 
         private Panel panel1;
-        private Button motor_off;
         private Panel panel4;
         private Panel panel2;
         private Panel panel5;
         private Panel panel3;
         private Panel panel6;
-        private PictureBox motorOff;
-        private Button button1;
         private System.Windows.Forms.Timer timer1;
-        private PictureBox motorOn1;
-        private PictureBox motorOn3;
-        private PictureBox motorOn5;
-        private PictureBox motorOn7;
-        private PictureBox motorOn2;
-        private PictureBox motorOn4;
-        private PictureBox motorOn6;
-        private PictureBox motorOn8;
+        private Button btn_play;
+        private Button btn_stop;
+        private Label lbTimer;
+        private PictureBox motor_off_1;
+        private PictureBox motor_on_1;
+        private PictureBox motor_on_4;
+        private PictureBox motor_off_4;
+        private PictureBox motor_on_3;
+        private PictureBox motor_off_3;
+        private PictureBox motor_on_2;
+        private PictureBox motor_off_2;
+        private Label lbMotor1;
+        private Label lbMotor2;
+        private Label lbMotor4;
+        private Label lbMotor3;
+        private Label statusMotor1;
+        private Label statusMotor2;
+        private Label statusMotor4;
+        private Label statusMotor3;
     }
 }

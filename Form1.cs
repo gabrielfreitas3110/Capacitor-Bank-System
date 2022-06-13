@@ -7,110 +7,128 @@ namespace Capacitor_Bank_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        int i = 0;
+        Boolean statusM1 = false;
+        Boolean statusM2 = false;
+        Boolean statusM3 = false;
+        Boolean statusM4 = false;
+
+        private void btnPlay_Click(object sender, EventArgs e)
         {
-            if(timer1.Enabled) timer1.Stop();
-            else timer1.Start();
-            motorOff.Visible = motorOff.Visible ? false : true;
-            motorOn1.Visible = motorOn1.Visible ? false : false;
-            motorOn2.Visible = motorOn2.Visible ? false : false;
-            motorOn3.Visible = motorOn3.Visible ? false : false;
-            motorOn4.Visible = motorOn4.Visible ? false : false;
-            motorOn5.Visible = motorOn5.Visible ? false : false;
-            motorOn6.Visible = motorOn6.Visible ? false : false;
-            motorOn7.Visible = motorOn7.Visible ? false : false;
-            motorOn8.Visible = motorOn8.Visible ? false : false;
+            btn_play.Enabled = false;
+            btn_stop.Enabled = true;
+            timer1.Enabled = true;
         }
 
-        int i = 1;
-        int speed = 100;
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            btn_play.Enabled = true;
+            btn_stop.Enabled = false;
+            timer1.Enabled = false;
+            stopAll();
+        }
+
+        private void stopAll()
+        {
+            statusM1 = false;
+            statusM2 = false;
+            statusM3 = false;
+            statusM4 = false;
+            motor_on_1.Visible = statusM1;
+            motor_on_2.Visible = statusM2;
+            motor_on_3.Visible = statusM3;
+            motor_on_4.Visible = statusM4;
+            motor_off_1.Visible = !statusM1;
+            motor_off_2.Visible = !statusM2;
+            motor_off_3.Visible = !statusM3;
+            motor_off_4.Visible = !statusM4;
+            statusMotor1.Text = statusM1.ToString();
+            statusMotor2.Text = statusM2.ToString();
+            statusMotor3.Text = statusM3.ToString();
+            statusMotor4.Text = statusM4.ToString();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-                switch (i)
-                {
-                    case 1:
-                        motorOn1.Visible = true;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 2:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = true;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 3:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = true;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 4:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = true;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 5:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = true;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 6:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = true;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = false;
-                        break;
-                    case 7:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = true;
-                        motorOn8.Visible = false;
-                        break;
-                    case 8:
-                        motorOn1.Visible = false;
-                        motorOn2.Visible = false;
-                        motorOn3.Visible = false;
-                        motorOn4.Visible = false;
-                        motorOn5.Visible = false;
-                        motorOn6.Visible = false;
-                        motorOn7.Visible = false;
-                        motorOn8.Visible = true;
-                        break;
-            }
+            lbTimer.Text = i.ToString();
             i++;
-            if (i == 9) i = 0;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = timer1.Enabled ? false : true;
+        }
+        private void motor_on_1_Click(object sender, EventArgs e)
+        {
+            statusM1 = false;
+            liga_desliga_motor();
+        }
+        private void motor_off_1_Click(object sender, EventArgs e)
+        {
+            if (!btn_play.Enabled)
+            {
+                statusM1 = true;
+                liga_desliga_motor();
+            }
+        }
+        private void motor_on_2_Click(object sender, EventArgs e)
+        {
+            statusM2 = false;
+            liga_desliga_motor();
+        }
+        private void motor_off_2_Click(object sender, EventArgs e)
+        {
+            if (!btn_play.Enabled)
+            {
+                statusM2 = true;
+                liga_desliga_motor();
+            }
+        }
+        private void motor_on_3_Click(object sender, EventArgs e)
+        {
+            statusM3 = false;
+            liga_desliga_motor();
+        }
+        private void motor_off_3_Click(object sender, EventArgs e)
+        {
+            if (!btn_play.Enabled)
+            {
+                statusM3 = true;
+                liga_desliga_motor();
+            }
+        }
+        private void motor_on_4_Click(object sender, EventArgs e)
+        {
+            statusM4 = false;
+            liga_desliga_motor();
+        }
+        private void motor_off_4_Click(object sender, EventArgs e)
+        {
+            if (!btn_play.Enabled)
+            {
+                statusM4 = true;
+                liga_desliga_motor();
+            }
+        }
+        private void liga_desliga_motor()
+        {
+            motor_on_1.Visible = statusM1;
+            motor_off_1.Visible = !statusM1;
+            statusMotor1.Text = statusM1.ToString();
+
+            motor_on_2.Visible = statusM2;
+            motor_off_2.Visible = !statusM2;
+            statusMotor2.Text = statusM2.ToString();
+                 
+            motor_on_3.Visible = statusM3;
+            motor_off_3.Visible = !statusM3;
+            statusMotor3.Text = statusM3.ToString();
+                 
+            motor_on_4.Visible = statusM4;
+            motor_off_4.Visible = !statusM4;
+            statusMotor4.Text = statusM4.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
         }
     }
 }

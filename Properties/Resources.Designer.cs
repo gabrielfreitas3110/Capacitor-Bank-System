@@ -73,79 +73,9 @@ namespace Capacitor_Bank_System.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap motor_on_1 {
+        internal static System.Drawing.Bitmap motor_on {
             get {
-                object obj = ResourceManager.GetObject("motor_on_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_2 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_3 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_4 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_5 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_6 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_7 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap motor_on_8 {
-            get {
-                object obj = ResourceManager.GetObject("motor_on_8", resourceCulture);
+                object obj = ResourceManager.GetObject("motor_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
