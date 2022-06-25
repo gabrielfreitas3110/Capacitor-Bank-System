@@ -79,5 +79,16 @@ namespace Capacitor_Bank_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rp_ga_420_motor_elektromotor_55_kw_230_400_60_3ph_mec_112_fuer_industriekompressor_rp_ga_gg650_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("rp-ga-420_motor-elektromotor-55-kw-230-400-60-3ph-mec-112-fuer-industriekompresso" +
+                        "r-rp-ga-gg650-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

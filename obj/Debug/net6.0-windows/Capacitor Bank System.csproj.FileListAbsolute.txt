@@ -16,3 +16,4 @@ C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-win
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.pdb
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.genruntimeconfig.cache
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\ref\Capacitor Bank System.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.FrmMotor1.resources

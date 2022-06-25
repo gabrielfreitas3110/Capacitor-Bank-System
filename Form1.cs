@@ -68,6 +68,11 @@ namespace Capacitor_Bank_System
                 statusM1 = true;
                 liga_desliga_motor();
             }
+            else
+            {
+                FrmMotor1 frmMotor1 = new FrmMotor1();
+                frmMotor1.ShowDialog();
+            }
         }
         private void motor_on_2_Click(object sender, EventArgs e)
         {
