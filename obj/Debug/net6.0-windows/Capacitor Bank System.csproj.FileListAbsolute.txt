@@ -17,3 +17,10 @@ C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-win
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.genruntimeconfig.cache
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\ref\Capacitor Bank System.dll
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.FrmMotor1.resources
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.csproj.CopyComplete

@@ -62,7 +62,6 @@
             this.label1.Size = new System.Drawing.Size(33, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtId
             // 
@@ -231,7 +230,7 @@
             this.btnInserir.TabIndex = 19;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnCalc_Click);
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnEditar
             // 
@@ -292,6 +291,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmMotor1";
             this.Text = "FrmMotor1";
+            this.Load += new System.EventHandler(this.FrmMotor1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

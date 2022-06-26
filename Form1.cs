@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace Capacitor_Bank_System
 {
     public partial class Form1 : Form
@@ -46,6 +48,7 @@ namespace Capacitor_Bank_System
             statusMotor2.Text = statusM2.ToString();
             statusMotor3.Text = statusM3.ToString();
             statusMotor4.Text = statusM4.ToString();
+            stopAllMotor();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -60,6 +63,7 @@ namespace Capacitor_Bank_System
         {
             statusM1 = false;
             liga_desliga_motor();
+            updateStatusMotor(1, false);
         }
         private void motor_off_1_Click(object sender, EventArgs e)
         {
@@ -67,13 +71,60 @@ namespace Capacitor_Bank_System
             {
                 statusM1 = true;
                 liga_desliga_motor();
+                updateStatusMotor(1, true);
             }
             else
             {
                 FrmMotor1 frmMotor1 = new FrmMotor1();
+                frmMotor1.motorId = 1;
                 frmMotor1.ShowDialog();
             }
         }
+
+        private void updateStatusMotor(int id, bool status)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HJ62HDV; integrated security=SSPI; initial catalog=db_industria");
+            SqlCommand command = new SqlCommand();
+            con.Open();
+            string sql = string.Format("Update tb_motores Set status = '{0}' Where id = '{1}'", status, id);
+            command.CommandText = sql;
+            command.Connection = con;
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void stopAllMotor()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HJ62HDV; integrated security=SSPI; initial catalog=db_industria");
+            SqlCommand command = new SqlCommand();
+            con.Open();
+            string sql = string.Format("Update tb_motores Set status = '{0}'", false);
+            command.CommandText = sql;
+            command.Connection = con;
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         private void motor_on_2_Click(object sender, EventArgs e)
         {
             statusM2 = false;
@@ -85,6 +136,12 @@ namespace Capacitor_Bank_System
             {
                 statusM2 = true;
                 liga_desliga_motor();
+            }
+            else
+            {
+                FrmMotor1 frmMotor1 = new FrmMotor1();
+                frmMotor1.motorId = 2;
+                frmMotor1.ShowDialog();
             }
         }
         private void motor_on_3_Click(object sender, EventArgs e)
@@ -99,6 +156,12 @@ namespace Capacitor_Bank_System
                 statusM3 = true;
                 liga_desliga_motor();
             }
+            else
+            {
+                FrmMotor1 frmMotor1 = new FrmMotor1();
+                frmMotor1.motorId = 3;
+                frmMotor1.ShowDialog();
+            }
         }
         private void motor_on_4_Click(object sender, EventArgs e)
         {
@@ -111,6 +174,12 @@ namespace Capacitor_Bank_System
             {
                 statusM4 = true;
                 liga_desliga_motor();
+            }
+            else
+            {
+                FrmMotor1 frmMotor1 = new FrmMotor1();
+                frmMotor1.motorId = 4;
+                frmMotor1.ShowDialog();
             }
         }
         private void liga_desliga_motor()

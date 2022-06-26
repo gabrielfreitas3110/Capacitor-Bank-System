@@ -12,11 +12,11 @@ namespace Capacitor_Bank_System
         public string localizacao { get; set; }
         public int tensao { get; set; }
         public int potenciaCv { get; set; }
-        public double nRend { get; set; }
-        public double pAtiva { get; set; }
-        public double fp { get; set; }
-        public double pAparente { get; set; }
-        public double pReativa { get; set; }
+        public float nRend { get; set; }
+        public float pAtiva { get; set; }
+        public float fp { get; set; }
+        public float pAparente { get; set; }
+        public float pReativa { get; set; }
         public bool status { get; set; }
 
     }
