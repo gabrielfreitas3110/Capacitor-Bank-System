@@ -90,5 +90,15 @@ namespace Capacitor_Bank_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vista_de_cima_da_fabrica {
+            get {
+                object obj = ResourceManager.GetObject("vista-de-cima-da-fabrica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
