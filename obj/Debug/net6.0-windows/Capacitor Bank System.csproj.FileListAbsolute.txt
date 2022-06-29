@@ -24,3 +24,6 @@ C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-win
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor Bank System.csproj.CopyComplete
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.FrmCapacitor.resources
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\itextsharp.dll

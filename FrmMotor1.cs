@@ -13,7 +13,7 @@ namespace Capacitor_Bank_System
         public int motorId { get; set; }
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HJ62HDV; integrated security=SSPI; initial catalog=db_industria");
         SqlCommand command = new SqlCommand();
-        motor m = new motor();
+        Motor m = new Motor();
         private void btnInserir_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -53,7 +53,6 @@ namespace Capacitor_Bank_System
             {
                 con.Close();
             }
-
         }   
 
         private void txtRendimento_Leave(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace Capacitor_Bank_System
                 potSaida = decimal.Parse(txtPotCV.Text) * 746;
             if(txtRendimento.Text.Length > 0)
             {
-                m.pAtiva = potSaida / (decimal.Parse(txtRendimento.Text) / 100);
+                m.pAtiva = potSaida / (decimal.Parse(txtRendimento.Text) / 10000);
                 txtPotAtiv.Text = m.pAtiva.ToString();
             }
         }
@@ -135,6 +134,42 @@ namespace Capacitor_Bank_System
             {
                 command.ExecuteNonQuery();
                 MessageBox.Show("Dados atualizados com sucesso.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao tentar atualizados os dados no banco.");
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            m.id = Convert.ToInt32(txtId.Text);
+            m.localizacao = txtLocal.Text;
+            m.tensao = Convert.ToInt32(txtTensao.Text);
+            m.potenciaCv = Convert.ToInt32(txtPotCV.Text);
+            m.nRend = decimal.Parse(txtRendimento.Text) / 100;
+            m.pAtiva = decimal.Parse(txtPotAtiv.Text);
+            m.fp = decimal.Parse(txtFP.Text) / 100;
+            m.pAparente = decimal.Parse(txtPotApar.Text);
+            m.pReativa = decimal.Parse(txtPotReat.Text);
+            m.status = false;
+            string sql = string.Format("Delete tb_motores Where id=@id");
+            command.Parameters.AddWithValue("@id", m.id);
+            command.CommandText = sql;
+            command.Connection = con;
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Dado apagado com sucesso.");
+                this.Visible = false;
+                Form1 form1 = new Form1();
+                form1.ShowDialog();
             }
             catch (Exception ex)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capacitor_Bank_System
 {
-    internal class motor
+    internal class Motor
     {
         public int id { get; set; }
         public string localizacao { get; set; }

@@ -223,7 +223,7 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInserir.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnInserir.Location = new System.Drawing.Point(41, 212);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(83, 37);
@@ -234,7 +234,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnEditar.Location = new System.Drawing.Point(130, 212);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(83, 37);
@@ -245,13 +245,14 @@
             // 
             // btnApagar
             // 
-            this.btnApagar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnApagar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnApagar.Location = new System.Drawing.Point(219, 212);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(83, 37);
             this.btnApagar.TabIndex = 21;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // pictureBox1
             // 
@@ -291,7 +292,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "FrmMotor1";
-            this.Text = "FrmMotor1";
+            this.Text = "Motor Especification";
             this.Load += new System.EventHandler(this.FrmMotor1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ANA5vkjkBim7JdDSWIYDxbJ2dSj5D62THF6Zz+Qx/seysZNe/QnWl48o879Hvbbe374Wen+Z3jUcn6xksJY1Xw==",
+  "dgSpecHash": "hJtrOBPLPtc+Z+qxwYVBt5GJg73CkOtprXUmNuMyhFt+Bg/dwpoTX3F9wpYx/keAFTLlQPDD17aITzyg9eN8Nw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel Augusto\\source\\repos\\Capacitor Bank System\\Capacitor Bank System.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
     "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
@@ -14,5 +16,26 @@
     "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Gabriel Augusto\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'BouncyCastle 1.8.9' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'iTextSharp 5.5.13.3' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

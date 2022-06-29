@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.motor_off_24 = new System.Windows.Forms.PictureBox();
             this.motor_off_23 = new System.Windows.Forms.PictureBox();
             this.motor_off_22 = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,7 @@
             this.motor_on_18 = new System.Windows.Forms.PictureBox();
             this.motor_on_17 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.motor_off_16 = new System.Windows.Forms.PictureBox();
             this.motor_off_15 = new System.Windows.Forms.PictureBox();
             this.motor_off_14 = new System.Windows.Forms.PictureBox();
@@ -62,8 +64,7 @@
             this.motor_on_11 = new System.Windows.Forms.PictureBox();
             this.motor_on_10 = new System.Windows.Forms.PictureBox();
             this.motor_on_9 = new System.Windows.Forms.PictureBox();
-            this.btn_play = new System.Windows.Forms.Button();
-            this.btn_stop = new System.Windows.Forms.Button();
+            this.btn_disable = new System.Windows.Forms.Button();
             this.motor_on_1 = new System.Windows.Forms.PictureBox();
             this.motor_on_2 = new System.Windows.Forms.PictureBox();
             this.motor_on_3 = new System.Windows.Forms.PictureBox();
@@ -73,6 +74,7 @@
             this.motor_off_3 = new System.Windows.Forms.PictureBox();
             this.motor_off_4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.motor_off_8 = new System.Windows.Forms.PictureBox();
             this.motor_off_7 = new System.Windows.Forms.PictureBox();
             this.motor_off_6 = new System.Windows.Forms.PictureBox();
@@ -81,6 +83,15 @@
             this.motor_on_7 = new System.Windows.Forms.PictureBox();
             this.motor_on_6 = new System.Windows.Forms.PictureBox();
             this.motor_on_5 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeMotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeCapacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_enable = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_23)).BeginInit();
@@ -132,10 +143,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_5)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.motor_off_24);
             this.panel2.Controls.Add(this.motor_off_23);
             this.panel2.Controls.Add(this.motor_off_22);
@@ -152,10 +167,20 @@
             this.panel2.Controls.Add(this.motor_on_19);
             this.panel2.Controls.Add(this.motor_on_18);
             this.panel2.Controls.Add(this.motor_on_17);
-            this.panel2.Location = new System.Drawing.Point(852, 12);
+            this.panel2.Location = new System.Drawing.Point(1492, 112);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 400);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(134, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 42);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Bloco C";
             // 
             // motor_off_24
             // 
@@ -359,6 +384,9 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.motor_off_16);
             this.panel3.Controls.Add(this.motor_off_15);
             this.panel3.Controls.Add(this.motor_off_14);
@@ -375,10 +403,20 @@
             this.panel3.Controls.Add(this.motor_on_11);
             this.panel3.Controls.Add(this.motor_on_10);
             this.panel3.Controls.Add(this.motor_on_9);
-            this.panel3.Location = new System.Drawing.Point(12, 449);
+            this.panel3.Location = new System.Drawing.Point(12, 549);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 400);
             this.panel3.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(134, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 42);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Bloco B";
             // 
             // motor_off_16
             // 
@@ -580,34 +618,22 @@
             this.motor_on_9.Visible = false;
             this.motor_on_9.Click += new System.EventHandler(this.motor_on_9_Click);
             // 
-            // btn_play
+            // btn_disable
             // 
-            this.btn_play.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_play.Location = new System.Drawing.Point(1054, 813);
-            this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(96, 36);
-            this.btn_play.TabIndex = 2;
-            this.btn_play.Text = "Play";
-            this.btn_play.UseVisualStyleBackColor = true;
-            this.btn_play.Click += new System.EventHandler(this.btnPlay_Click);
-            // 
-            // btn_stop
-            // 
-            this.btn_stop.Enabled = false;
-            this.btn_stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_stop.Location = new System.Drawing.Point(1156, 813);
-            this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(96, 36);
-            this.btn_stop.TabIndex = 3;
-            this.btn_stop.Text = "Stop";
-            this.btn_stop.UseVisualStyleBackColor = true;
-            this.btn_stop.Click += new System.EventHandler(this.btnStop_Click);
+            this.btn_disable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_disable.Location = new System.Drawing.Point(1742, 993);
+            this.btn_disable.Name = "btn_disable";
+            this.btn_disable.Size = new System.Drawing.Size(150, 36);
+            this.btn_disable.TabIndex = 2;
+            this.btn_disable.Text = "Disable Edit";
+            this.btn_disable.UseVisualStyleBackColor = true;
+            this.btn_disable.Click += new System.EventHandler(this.btnDisable_Click);
             // 
             // motor_on_1
             // 
             this.motor_on_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_1.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_1.Location = new System.Drawing.Point(35, 17);
+            this.motor_on_1.Location = new System.Drawing.Point(45, 20);
             this.motor_on_1.Name = "motor_on_1";
             this.motor_on_1.Size = new System.Drawing.Size(43, 59);
             this.motor_on_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -620,7 +646,7 @@
             // 
             this.motor_on_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_2.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_2.Location = new System.Drawing.Point(123, 17);
+            this.motor_on_2.Location = new System.Drawing.Point(133, 20);
             this.motor_on_2.Name = "motor_on_2";
             this.motor_on_2.Size = new System.Drawing.Size(43, 59);
             this.motor_on_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -633,7 +659,7 @@
             // 
             this.motor_on_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_3.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_3.Location = new System.Drawing.Point(214, 17);
+            this.motor_on_3.Location = new System.Drawing.Point(224, 20);
             this.motor_on_3.Name = "motor_on_3";
             this.motor_on_3.Size = new System.Drawing.Size(43, 59);
             this.motor_on_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -646,7 +672,7 @@
             // 
             this.motor_on_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_4.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_4.Location = new System.Drawing.Point(302, 17);
+            this.motor_on_4.Location = new System.Drawing.Point(312, 20);
             this.motor_on_4.Name = "motor_on_4";
             this.motor_on_4.Size = new System.Drawing.Size(43, 59);
             this.motor_on_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -659,7 +685,7 @@
             // 
             this.motor_off_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_1.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_1.Location = new System.Drawing.Point(35, 17);
+            this.motor_off_1.Location = new System.Drawing.Point(45, 20);
             this.motor_off_1.Name = "motor_off_1";
             this.motor_off_1.Size = new System.Drawing.Size(43, 59);
             this.motor_off_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -671,7 +697,7 @@
             // 
             this.motor_off_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_2.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_2.Location = new System.Drawing.Point(123, 17);
+            this.motor_off_2.Location = new System.Drawing.Point(133, 20);
             this.motor_off_2.Name = "motor_off_2";
             this.motor_off_2.Size = new System.Drawing.Size(43, 59);
             this.motor_off_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -683,7 +709,7 @@
             // 
             this.motor_off_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_3.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_3.Location = new System.Drawing.Point(214, 17);
+            this.motor_off_3.Location = new System.Drawing.Point(224, 20);
             this.motor_off_3.Name = "motor_off_3";
             this.motor_off_3.Size = new System.Drawing.Size(43, 59);
             this.motor_off_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -695,7 +721,7 @@
             // 
             this.motor_off_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_4.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_4.Location = new System.Drawing.Point(302, 17);
+            this.motor_off_4.Location = new System.Drawing.Point(312, 20);
             this.motor_off_4.Name = "motor_off_4";
             this.motor_off_4.Size = new System.Drawing.Size(43, 59);
             this.motor_off_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -706,6 +732,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.motor_off_8);
             this.panel1.Controls.Add(this.motor_off_7);
             this.panel1.Controls.Add(this.motor_off_6);
@@ -722,16 +750,26 @@
             this.panel1.Controls.Add(this.motor_on_3);
             this.panel1.Controls.Add(this.motor_on_2);
             this.panel1.Controls.Add(this.motor_on_1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(134, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 42);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Bloco A";
             // 
             // motor_off_8
             // 
             this.motor_off_8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_8.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_8.Location = new System.Drawing.Point(302, 318);
+            this.motor_off_8.Location = new System.Drawing.Point(312, 321);
             this.motor_off_8.Name = "motor_off_8";
             this.motor_off_8.Size = new System.Drawing.Size(43, 59);
             this.motor_off_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -743,7 +781,7 @@
             // 
             this.motor_off_7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_7.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_7.Location = new System.Drawing.Point(214, 318);
+            this.motor_off_7.Location = new System.Drawing.Point(224, 321);
             this.motor_off_7.Name = "motor_off_7";
             this.motor_off_7.Size = new System.Drawing.Size(43, 59);
             this.motor_off_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -755,7 +793,7 @@
             // 
             this.motor_off_6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_6.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_6.Location = new System.Drawing.Point(123, 318);
+            this.motor_off_6.Location = new System.Drawing.Point(133, 321);
             this.motor_off_6.Name = "motor_off_6";
             this.motor_off_6.Size = new System.Drawing.Size(43, 59);
             this.motor_off_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -767,7 +805,7 @@
             // 
             this.motor_off_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_off_5.Image = global::Capacitor_Bank_System.Properties.Resources.motor_off;
-            this.motor_off_5.Location = new System.Drawing.Point(35, 318);
+            this.motor_off_5.Location = new System.Drawing.Point(45, 321);
             this.motor_off_5.Name = "motor_off_5";
             this.motor_off_5.Size = new System.Drawing.Size(43, 59);
             this.motor_off_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -779,7 +817,7 @@
             // 
             this.motor_on_8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_8.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_8.Location = new System.Drawing.Point(302, 318);
+            this.motor_on_8.Location = new System.Drawing.Point(312, 321);
             this.motor_on_8.Name = "motor_on_8";
             this.motor_on_8.Size = new System.Drawing.Size(43, 59);
             this.motor_on_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -792,7 +830,7 @@
             // 
             this.motor_on_7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_7.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_7.Location = new System.Drawing.Point(214, 318);
+            this.motor_on_7.Location = new System.Drawing.Point(224, 321);
             this.motor_on_7.Name = "motor_on_7";
             this.motor_on_7.Size = new System.Drawing.Size(43, 59);
             this.motor_on_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -805,7 +843,7 @@
             // 
             this.motor_on_6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_6.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_6.Location = new System.Drawing.Point(123, 318);
+            this.motor_on_6.Location = new System.Drawing.Point(133, 321);
             this.motor_on_6.Name = "motor_on_6";
             this.motor_on_6.Size = new System.Drawing.Size(43, 59);
             this.motor_on_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -818,7 +856,7 @@
             // 
             this.motor_on_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.motor_on_5.Image = global::Capacitor_Bank_System.Properties.Resources.motor_on;
-            this.motor_on_5.Location = new System.Drawing.Point(35, 318);
+            this.motor_on_5.Location = new System.Drawing.Point(45, 321);
             this.motor_on_5.Name = "motor_on_5";
             this.motor_on_5.Size = new System.Drawing.Size(43, 59);
             this.motor_on_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -827,21 +865,105 @@
             this.motor_on_5.Visible = false;
             this.motor_on_5.Click += new System.EventHandler(this.motor_on_5_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opçõesToolStripMenuItem,
+            this.relatóriosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // opçõesToolStripMenuItem
+            // 
+            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.motoresToolStripMenuItem,
+            this.capacitoresToolStripMenuItem});
+            this.opçõesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.opçõesToolStripMenuItem.Text = "Opções";
+            // 
+            // motoresToolStripMenuItem
+            // 
+            this.motoresToolStripMenuItem.Name = "motoresToolStripMenuItem";
+            this.motoresToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.motoresToolStripMenuItem.Text = "Motores";
+            this.motoresToolStripMenuItem.Click += new System.EventHandler(this.motoresToolStripMenuItem_Click);
+            // 
+            // capacitoresToolStripMenuItem
+            // 
+            this.capacitoresToolStripMenuItem.Name = "capacitoresToolStripMenuItem";
+            this.capacitoresToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.capacitoresToolStripMenuItem.Text = "Capacitores";
+            this.capacitoresToolStripMenuItem.Click += new System.EventHandler(this.capacitoresToolStripMenuItem_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.relatórioDeMotoresToolStripMenuItem,
+            this.relatórioDeCapacitoresToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // relatórioDeMotoresToolStripMenuItem
+            // 
+            this.relatórioDeMotoresToolStripMenuItem.Name = "relatórioDeMotoresToolStripMenuItem";
+            this.relatórioDeMotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.relatórioDeMotoresToolStripMenuItem.Text = "Relatório de Motores";
+            this.relatórioDeMotoresToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeMotoresToolStripMenuItem_Click);
+            // 
+            // relatórioDeCapacitoresToolStripMenuItem
+            // 
+            this.relatórioDeCapacitoresToolStripMenuItem.Name = "relatórioDeCapacitoresToolStripMenuItem";
+            this.relatórioDeCapacitoresToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.relatórioDeCapacitoresToolStripMenuItem.Text = "Relatório de Capacitores";
+            this.relatórioDeCapacitoresToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeCapacitoresToolStripMenuItem_Click);
+            // 
+            // btn_enable
+            // 
+            this.btn_enable.Enabled = false;
+            this.btn_enable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_enable.Location = new System.Drawing.Point(1742, 951);
+            this.btn_enable.Name = "btn_enable";
+            this.btn_enable.Size = new System.Drawing.Size(150, 36);
+            this.btn_enable.TabIndex = 3;
+            this.btn_enable.Text = "Enable Edit";
+            this.btn_enable.UseVisualStyleBackColor = true;
+            this.btn_enable.Click += new System.EventHandler(this.btnEnable_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "pdf";
+            this.saveFileDialog1.Filter = "txt files (*.pdf)|*.txt|All files (*.*)|*.*";
+            this.saveFileDialog1.FilterIndex = 2;
+            this.saveFileDialog1.InitialDirectory = "C:\\Users\\Gabriel Augusto\\Desktop";
+            this.saveFileDialog1.RestoreDirectory = true;
+            this.saveFileDialog1.Title = "Browse Files";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1264, 861);
-            this.Controls.Add(this.btn_stop);
-            this.Controls.Add(this.btn_play);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_enable);
+            this.Controls.Add(this.btn_disable);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Industrial Motors";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_22)).EndInit();
@@ -859,6 +981,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_17)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_14)).EndInit();
@@ -884,6 +1007,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_4)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_6)).EndInit();
@@ -892,15 +1016,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_5)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private Panel panel2;
         private Panel panel3;
-        private Button btn_play;
-        private Button btn_stop;
+        private Button btn_disable;
         private PictureBox motor_on_1;
         private PictureBox motor_on_2;
         private PictureBox motor_on_3;
@@ -950,5 +1076,17 @@
         private PictureBox motor_on_11;
         private PictureBox motor_on_10;
         private PictureBox motor_on_9;
+        private MenuStrip menuStrip1;
+        private Button btn_enable;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private ToolStripMenuItem opçõesToolStripMenuItem;
+        private ToolStripMenuItem capacitoresToolStripMenuItem;
+        private ToolStripMenuItem relatóriosToolStripMenuItem;
+        private ToolStripMenuItem motoresToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeMotoresToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeCapacitoresToolStripMenuItem;
+        private SaveFileDialog saveFileDialog1;
     }
 }
