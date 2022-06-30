@@ -1238,7 +1238,8 @@ namespace Capacitor_Bank_System
         private void txtFP_Leave(object sender, EventArgs e)
         {
             txtFP.Text = txtFP.Text.Replace(",", ".");
-            fpDesejado = decimal.Parse(txtFP.Text) / 100;
+            if(txtFP.Text.Length != 0)
+                fpDesejado = decimal.Parse(txtFP.Text) / 100;
             calculateAllData();
         }
     }
