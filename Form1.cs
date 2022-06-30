@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using Font = iTextSharp.text.Font;
@@ -16,15 +15,41 @@ namespace Capacitor_Bank_System
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HJ62HDV; integrated security=SSPI; initial catalog=db_industria");
         SqlCommand command = new SqlCommand();
-
+        decimal potAtivaTotal = 0;
+        decimal potAparenteTotal = 0;
+        decimal potReativaTotal = 0;
+        decimal fp = 0;
+        decimal capacitanciaMax = 0;
+        decimal reatCapMax = 0;
+        decimal fpDesejado = 0; 
+        decimal pAparenteNova = 0;
         private void btnDisable_Click(object sender, EventArgs e)
         {
-            btn_disable.Enabled = false;
+                if (btn_enable.Enabled)
+                {
+                    btn_enable.BackColor = SystemColors.ActiveCaption;
+                    btn_disable.BackColor = SystemColors.ControlLight;
+                }
+                else
+                {
+                    btn_enable.BackColor = SystemColors.ControlLight;
+                    btn_disable.BackColor = SystemColors.ActiveCaption;
+                }
+                btn_disable.Enabled = false;
             btn_enable.Enabled = true;
         }
 
         private void btnEnable_Click(object sender, EventArgs e)
         {
+            if (btn_enable.Enabled) { 
+                btn_enable.BackColor = SystemColors.ActiveCaption;
+                btn_disable.BackColor = SystemColors.Window;
+            }
+            else
+            {
+                btn_enable.BackColor = SystemColors.Window;
+                btn_disable.BackColor = SystemColors.ActiveCaption;
+            }
             btn_disable.Enabled = true;
             btn_enable.Enabled = false;
         }
@@ -698,6 +723,7 @@ namespace Capacitor_Bank_System
             {
                 liga_desliga_motor(motors[i].id, motors[i].status);
             }
+            calculateAllData();
         }
 
         private List<Motor> getAllDataMotors()
@@ -857,7 +883,7 @@ namespace Capacitor_Bank_System
                     updateStatusMotor(id, status);
                     break;
             }
-
+            calculateAllData();
         }
 
         
@@ -865,26 +891,6 @@ namespace Capacitor_Bank_System
         {
             con.Open();
             string sql = string.Format("Update tb_motores Set status = '{0}' Where id = '{1}'", status, id);
-            command.CommandText = sql;
-            command.Connection = con;
-            try
-            {
-                command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
-        private void stopAllMotor()
-        {
-            con.Open();
-            string sql = string.Format("Update tb_motores Set status = '{0}'", false);
             command.CommandText = sql;
             command.Connection = con;
             try
@@ -1064,7 +1070,6 @@ namespace Capacitor_Bank_System
         }
         private void relatórioDeCapacitoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             string path = Globais.path + @"\Relatorio_Motores.pdf";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -1166,6 +1171,75 @@ namespace Capacitor_Bank_System
                 string path = saveFileDialog1.FileName;
                 Console.WriteLine(path);
             }
+        }
+
+        private void projetarBancoDeCapacitoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FrmCapacitorProjection frmCapacitorProjection = new FrmCapacitorProjection();
+            frmCapacitorProjection.ShowDialog();
+        }
+        List<Motor> motors;
+        List<Capacitor> capacitors;
+        private void calculateAllData()
+        {
+            motors = getAllDataMotors();
+            capacitors = getAllDataCapacitors();
+            potAtivaTotal = 0;
+            potAparenteTotal = 0;
+            potReativaTotal = 0;
+            fp = 0;
+            capacitanciaMax = 0;
+            reatCapMax = 0;
+            pAparenteNova = 0;
+
+            foreach (Motor m in motors)
+            {
+                if (m.status)
+                {
+                    potAtivaTotal += m.pAtiva;
+                    potAparenteTotal += m.pAparente;
+                    potReativaTotal += m.pReativa;
+                }
+            }
+            foreach (Capacitor c in capacitors)
+            {
+                capacitanciaMax += c.capacitancia;
+                decimal aux1 = (decimal) (2 * Math.PI * 60 * Math.Pow(c.tensao, 2));
+                reatCapMax += (c.capacitancia * Convert.ToDecimal(Math.Pow(10, -6))) * aux1;
+                int x = 0;
+            }
+            fp = potAparenteTotal == 0 ? 0 : potAtivaTotal / potAparenteTotal;
+            lbPotAtiv.Text = String.Format("{0:0.00}", (potAtivaTotal / 1000)) + " kW";
+            lbPotAp.Text = String.Format("{0:0.00}", (potAparenteTotal / 1000)) + " kVA";
+            lbPotReat.Text = String.Format("{0:0.00}", (potReativaTotal / 1000)) + " kVAr";
+            lbFP.Text = String.Format("{0:0.00}", fp);
+            if(capacitanciaMax < 1000)
+                lbCapacitMax.Text = String.Format("{0:0.00}", capacitanciaMax) + " uF";
+            if(capacitanciaMax >= 1000)
+                lbCapacitMax.Text = String.Format("{0:0.00}", capacitanciaMax/1000) + " mF";
+            lbReatCapMax.Text = String.Format("{0:0.00}", reatCapMax / 1000) + " kVAr";
+            double teta = Math.Acos((double)fpDesejado);
+            decimal qF = 0;
+            decimal qC = 0;
+            if (fpDesejado != 0)
+                pAparenteNova = potAtivaTotal / fpDesejado;
+            qF = pAparenteNova * Convert.ToDecimal(Math.Sin(teta));
+            if(qF != 0)
+                qC = potReativaTotal - qF;
+
+            capacitors = getAllDataCapacitors();
+            decimal aux2 = (decimal)(2 * Math.PI * 60 * Math.Pow(capacitors[0].tensao, 2));
+            decimal capNec = qC / aux2;
+            lbCapNecessaria.Text = string.Format("{0:0.000}", capNec*1000) + " mF";
+            lbPotReatNecessaria.Text = string.Format("{0:0.000}", qC/1000) + " kVAr";
+        }
+
+        private void txtFP_Leave(object sender, EventArgs e)
+        {
+            txtFP.Text = txtFP.Text.Replace(",", ".");
+            fpDesejado = decimal.Parse(txtFP.Text) / 100;
+            calculateAllData();
         }
     }
 }

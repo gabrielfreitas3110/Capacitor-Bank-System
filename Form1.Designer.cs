@@ -85,13 +85,38 @@
             this.motor_on_5 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.motoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeMotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeCapacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projetarBancoDeCapacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_enable = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbPotReatNecessaria = new System.Windows.Forms.Label();
+            this.lbCapNecessaria = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtFP = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbReatCapMax = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbCapacitMax = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbPotAtiv = new System.Windows.Forms.Label();
+            this.lbFP = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbPotReat = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbPotAp = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnCalcIA = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_off_23)).BeginInit();
@@ -144,6 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_5)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -620,13 +646,14 @@
             // 
             // btn_disable
             // 
+            this.btn_disable.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_disable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_disable.Location = new System.Drawing.Point(1742, 993);
+            this.btn_disable.Location = new System.Drawing.Point(1718, 993);
             this.btn_disable.Name = "btn_disable";
-            this.btn_disable.Size = new System.Drawing.Size(150, 36);
+            this.btn_disable.Size = new System.Drawing.Size(174, 36);
             this.btn_disable.TabIndex = 2;
-            this.btn_disable.Text = "Disable Edit";
-            this.btn_disable.UseVisualStyleBackColor = true;
+            this.btn_disable.Text = "Desativar Edição";
+            this.btn_disable.UseVisualStyleBackColor = false;
             this.btn_disable.Click += new System.EventHandler(this.btnDisable_Click);
             // 
             // motor_on_1
@@ -869,7 +896,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opçõesToolStripMenuItem,
-            this.relatóriosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem,
+            this.projetarBancoDeCapacitoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1904, 28);
@@ -879,26 +907,26 @@
             // opçõesToolStripMenuItem
             // 
             this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.motoresToolStripMenuItem,
-            this.capacitoresToolStripMenuItem});
+            this.capacitoresToolStripMenuItem,
+            this.motoresToolStripMenuItem});
             this.opçõesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
             this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.opçõesToolStripMenuItem.Text = "Opções";
             // 
-            // motoresToolStripMenuItem
-            // 
-            this.motoresToolStripMenuItem.Name = "motoresToolStripMenuItem";
-            this.motoresToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.motoresToolStripMenuItem.Text = "Motores";
-            this.motoresToolStripMenuItem.Click += new System.EventHandler(this.motoresToolStripMenuItem_Click);
-            // 
             // capacitoresToolStripMenuItem
             // 
             this.capacitoresToolStripMenuItem.Name = "capacitoresToolStripMenuItem";
-            this.capacitoresToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.capacitoresToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.capacitoresToolStripMenuItem.Text = "Capacitores";
             this.capacitoresToolStripMenuItem.Click += new System.EventHandler(this.capacitoresToolStripMenuItem_Click);
+            // 
+            // motoresToolStripMenuItem
+            // 
+            this.motoresToolStripMenuItem.Name = "motoresToolStripMenuItem";
+            this.motoresToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.motoresToolStripMenuItem.Text = "Motores";
+            this.motoresToolStripMenuItem.Click += new System.EventHandler(this.motoresToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -924,16 +952,25 @@
             this.relatórioDeCapacitoresToolStripMenuItem.Text = "Relatório de Capacitores";
             this.relatórioDeCapacitoresToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeCapacitoresToolStripMenuItem_Click);
             // 
+            // projetarBancoDeCapacitoresToolStripMenuItem
+            // 
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Name = "projetarBancoDeCapacitoresToolStripMenuItem";
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Text = "Projetar Banco de Capacitores";
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Click += new System.EventHandler(this.projetarBancoDeCapacitoresToolStripMenuItem_Click);
+            // 
             // btn_enable
             // 
+            this.btn_enable.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_enable.Enabled = false;
             this.btn_enable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_enable.Location = new System.Drawing.Point(1742, 951);
+            this.btn_enable.Location = new System.Drawing.Point(1718, 951);
             this.btn_enable.Name = "btn_enable";
-            this.btn_enable.Size = new System.Drawing.Size(150, 36);
+            this.btn_enable.Size = new System.Drawing.Size(174, 36);
             this.btn_enable.TabIndex = 3;
-            this.btn_enable.Text = "Enable Edit";
-            this.btn_enable.UseVisualStyleBackColor = true;
+            this.btn_enable.Text = "Ativar Edição";
+            this.btn_enable.UseVisualStyleBackColor = false;
             this.btn_enable.Click += new System.EventHandler(this.btnEnable_Click);
             // 
             // saveFileDialog1
@@ -945,13 +982,274 @@
             this.saveFileDialog1.RestoreDirectory = true;
             this.saveFileDialog1.Title = "Browse Files";
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Location = new System.Drawing.Point(0, 28);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1904, 24);
+            this.menuStrip2.TabIndex = 9;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.lbPotReatNecessaria);
+            this.panel4.Controls.Add(this.lbCapNecessaria);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.txtFP);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.lbReatCapMax);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.lbCapacitMax);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lbPotAtiv);
+            this.panel4.Controls.Add(this.lbFP);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lbPotReat);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.lbPotAp);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Location = new System.Drawing.Point(659, 112);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(603, 569);
+            this.panel4.TabIndex = 10;
+            // 
+            // lbPotReatNecessaria
+            // 
+            this.lbPotReatNecessaria.AutoSize = true;
+            this.lbPotReatNecessaria.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPotReatNecessaria.Location = new System.Drawing.Point(312, 411);
+            this.lbPotReatNecessaria.Name = "lbPotReatNecessaria";
+            this.lbPotReatNecessaria.Size = new System.Drawing.Size(22, 24);
+            this.lbPotReatNecessaria.TabIndex = 20;
+            this.lbPotReatNecessaria.Text = "0";
+            // 
+            // lbCapNecessaria
+            // 
+            this.lbCapNecessaria.AutoSize = true;
+            this.lbCapNecessaria.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCapNecessaria.Location = new System.Drawing.Point(273, 381);
+            this.lbCapNecessaria.Name = "lbCapNecessaria";
+            this.lbCapNecessaria.Size = new System.Drawing.Size(22, 24);
+            this.lbCapNecessaria.TabIndex = 17;
+            this.lbCapNecessaria.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(15, 381);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(252, 24);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Capacitância Necessária:";
+            // 
+            // txtFP
+            // 
+            this.txtFP.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFP.Location = new System.Drawing.Point(159, 343);
+            this.txtFP.Name = "txtFP";
+            this.txtFP.Size = new System.Drawing.Size(53, 32);
+            this.txtFP.TabIndex = 13;
+            this.txtFP.Leave += new System.EventHandler(this.txtFP_Leave);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(15, 297);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(256, 24);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Potência Reativa Máxima:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(15, 351);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(138, 24);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "FP Desejado:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(15, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 24);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Motores";
+            // 
+            // lbReatCapMax
+            // 
+            this.lbReatCapMax.AutoSize = true;
+            this.lbReatCapMax.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbReatCapMax.Location = new System.Drawing.Point(277, 297);
+            this.lbReatCapMax.Name = "lbReatCapMax";
+            this.lbReatCapMax.Size = new System.Drawing.Size(22, 24);
+            this.lbReatCapMax.TabIndex = 13;
+            this.lbReatCapMax.Text = "0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(15, 237);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 24);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Capacitores";
+            // 
+            // lbCapacitMax
+            // 
+            this.lbCapacitMax.AutoSize = true;
+            this.lbCapacitMax.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCapacitMax.Location = new System.Drawing.Point(238, 267);
+            this.lbCapacitMax.Name = "lbCapacitMax";
+            this.lbCapacitMax.Size = new System.Drawing.Size(22, 24);
+            this.lbCapacitMax.TabIndex = 11;
+            this.lbCapacitMax.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(15, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(217, 24);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Capacitância Máxima:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(15, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(201, 24);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Potência Ativa Total:";
+            // 
+            // lbPotAtiv
+            // 
+            this.lbPotAtiv.AutoSize = true;
+            this.lbPotAtiv.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPotAtiv.Location = new System.Drawing.Point(222, 87);
+            this.lbPotAtiv.Name = "lbPotAtiv";
+            this.lbPotAtiv.Size = new System.Drawing.Size(22, 24);
+            this.lbPotAtiv.TabIndex = 9;
+            this.lbPotAtiv.Text = "0";
+            // 
+            // lbFP
+            // 
+            this.lbFP.AutoSize = true;
+            this.lbFP.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbFP.Location = new System.Drawing.Point(205, 177);
+            this.lbFP.Name = "lbFP";
+            this.lbFP.Size = new System.Drawing.Size(22, 24);
+            this.lbFP.TabIndex = 6;
+            this.lbFP.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(159, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(305, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Dados Atuais em Tempo Real";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(15, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(184, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Fator de Potência:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(15, 147);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(228, 24);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Potência Reativa Total:";
+            // 
+            // lbPotReat
+            // 
+            this.lbPotReat.AutoSize = true;
+            this.lbPotReat.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPotReat.Location = new System.Drawing.Point(249, 147);
+            this.lbPotReat.Name = "lbPotReat";
+            this.lbPotReat.Size = new System.Drawing.Size(22, 24);
+            this.lbPotReat.TabIndex = 4;
+            this.lbPotReat.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(15, 117);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(238, 24);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Potência Aparente Total:";
+            // 
+            // lbPotAp
+            // 
+            this.lbPotAp.AutoSize = true;
+            this.lbPotAp.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPotAp.Location = new System.Drawing.Point(259, 117);
+            this.lbPotAp.Name = "lbPotAp";
+            this.lbPotAp.Size = new System.Drawing.Size(22, 24);
+            this.lbPotAp.TabIndex = 3;
+            this.lbPotAp.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(15, 411);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(291, 24);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Potência Reativa Necessária:";
+            // 
+            // btnCalcIA
+            // 
+            this.btnCalcIA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCalcIA.Enabled = false;
+            this.btnCalcIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCalcIA.Location = new System.Drawing.Point(1173, 687);
+            this.btnCalcIA.Name = "btnCalcIA";
+            this.btnCalcIA.Size = new System.Drawing.Size(89, 57);
+            this.btnCalcIA.TabIndex = 12;
+            this.btnCalcIA.Text = "Projetar Banco";
+            this.btnCalcIA.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btnCalcIA);
+            this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btn_enable);
             this.Controls.Add(this.btn_disable);
             this.Controls.Add(this.panel3);
@@ -1018,6 +1316,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.motor_on_5)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1088,5 +1388,31 @@
         private ToolStripMenuItem relatórioDeMotoresToolStripMenuItem;
         private ToolStripMenuItem relatórioDeCapacitoresToolStripMenuItem;
         private SaveFileDialog saveFileDialog1;
+        private ToolStripMenuItem projetarBancoDeCapacitoresToolStripMenuItem;
+        private MenuStrip menuStrip2;
+        private Panel panel4;
+        private Label label6;
+        private Label lbPotAtiv;
+        private Label lbFP;
+        private Label label5;
+        private Label label4;
+        private Label label7;
+        private Label lbPotReat;
+        private Label label8;
+        private Label lbPotAp;
+        private Button btnCalcIA;
+        private Label label9;
+        private Label lbCapacitMax;
+        private Label label11;
+        private TextBox txtFP;
+        private Label label10;
+        private Label lbReatCapMax;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private Label lbCapNecessaria;
+        private Label label15;
+        private Label lbPotReatNecessaria;
+        private Label label16;
     }
 }

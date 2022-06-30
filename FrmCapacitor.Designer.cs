@@ -39,6 +39,7 @@
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeMotoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeCapacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projetarBancoDeCapacitoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opçõesToolStripMenuItem,
-            this.relatóriosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem,
+            this.projetarBancoDeCapacitoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 28);
@@ -83,6 +84,7 @@
             this.capacitoresToolStripMenuItem.Name = "capacitoresToolStripMenuItem";
             this.capacitoresToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.capacitoresToolStripMenuItem.Text = "Capacitores";
+            this.capacitoresToolStripMenuItem.Click += new System.EventHandler(this.capacitoresToolStripMenuItem_Click);
             // 
             // motoresToolStripMenuItem
             // 
@@ -106,12 +108,22 @@
             this.relatórioDeMotoresToolStripMenuItem.Name = "relatórioDeMotoresToolStripMenuItem";
             this.relatórioDeMotoresToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.relatórioDeMotoresToolStripMenuItem.Text = "Relatório de Motores";
+            this.relatórioDeMotoresToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeMotoresToolStripMenuItem_Click);
             // 
             // relatórioDeCapacitoresToolStripMenuItem
             // 
             this.relatórioDeCapacitoresToolStripMenuItem.Name = "relatórioDeCapacitoresToolStripMenuItem";
             this.relatórioDeCapacitoresToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.relatórioDeCapacitoresToolStripMenuItem.Text = "Relatório de Capacitores";
+            this.relatórioDeCapacitoresToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeCapacitoresToolStripMenuItem_Click);
+            // 
+            // projetarBancoDeCapacitoresToolStripMenuItem
+            // 
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Name = "projetarBancoDeCapacitoresToolStripMenuItem";
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Text = "Projetar Banco de Capacitores";
+            this.projetarBancoDeCapacitoresToolStripMenuItem.Click += new System.EventHandler(this.projetarBancoDeCapacitoresToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -176,7 +188,7 @@
             // txtCapacitancia
             // 
             this.txtCapacitancia.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCapacitancia.Location = new System.Drawing.Point(201, 489);
+            this.txtCapacitancia.Location = new System.Drawing.Point(201, 491);
             this.txtCapacitancia.Name = "txtCapacitancia";
             this.txtCapacitancia.Size = new System.Drawing.Size(100, 26);
             this.txtCapacitancia.TabIndex = 32;
@@ -194,7 +206,7 @@
             // txtTensao
             // 
             this.txtTensao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTensao.Location = new System.Drawing.Point(566, 457);
+            this.txtTensao.Location = new System.Drawing.Point(440, 459);
             this.txtTensao.Name = "txtTensao";
             this.txtTensao.Size = new System.Drawing.Size(100, 26);
             this.txtTensao.TabIndex = 30;
@@ -203,7 +215,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(375, 459);
+            this.label3.Location = new System.Drawing.Point(249, 461);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 24);
             this.label3.TabIndex = 29;
@@ -212,7 +224,7 @@
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTipo.Location = new System.Drawing.Point(190, 457);
+            this.txtTipo.Location = new System.Drawing.Point(73, 459);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(170, 26);
             this.txtTipo.TabIndex = 28;
@@ -221,29 +233,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(129, 457);
+            this.label2.Location = new System.Drawing.Point(12, 459);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 27;
             this.label2.Text = "Tipo:";
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtId.Location = new System.Drawing.Point(51, 457);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(50, 26);
-            this.txtId.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 459);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 24);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Id:";
             // 
             // FrmCapacitor
             // 
@@ -256,8 +250,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -284,17 +276,17 @@
         private ToolStripMenuItem relatórioDeCapacitoresToolStripMenuItem;
         private DataGridView dataGridView1;
         private Button btnInserir;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Tipo;
-        private DataGridViewTextBoxColumn Capacitancia;
-        private DataGridViewTextBoxColumn Tensao;
         private TextBox txtCapacitancia;
         private Label label9;
         private TextBox txtTensao;
         private Label label3;
         protected TextBox txtTipo;
         private Label label2;
-        private TextBox txtId;
-        private Label label1;
+        private ToolStripMenuItem projetarBancoDeCapacitoresToolStripMenuItem;
+        private SaveFileDialog saveFileDialog1;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Tipo;
+        private DataGridViewTextBoxColumn Capacitancia;
+        private DataGridViewTextBoxColumn Tensao;
     }
 }

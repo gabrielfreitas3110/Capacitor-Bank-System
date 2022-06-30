@@ -7,6 +7,9 @@
     <Compile Update="FrmCapacitor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmCapacitorProjection.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmMotor1.cs">
       <SubType>Form</SubType>
     </Compile>

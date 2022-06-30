@@ -27,3 +27,4 @@ C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-win
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.FrmCapacitor.resources
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Gabriel Augusto\source\repos\Capacitor Bank System\obj\Debug\net6.0-windows\Capacitor_Bank_System.FrmCapacitorProjection.resources

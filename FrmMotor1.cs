@@ -60,7 +60,7 @@ namespace Capacitor_Bank_System
             decimal potSaida = 0;
             txtRendimento.Text = txtRendimento.Text.Replace(",", ".");
             if (txtPotCV.Text.Length > 0)
-                potSaida = decimal.Parse(txtPotCV.Text) * 746;
+                potSaida = decimal.Parse(txtPotCV.Text) * (decimal) 735.499;
             if(txtRendimento.Text.Length > 0)
             {
                 m.pAtiva = potSaida / (decimal.Parse(txtRendimento.Text) / 10000);
